@@ -6,7 +6,7 @@ services:
     image: ghcr.io/lostmaniac/dnsmasq:latest
     restart: always
     ports:
-      - "53:53"
+      - "53:53/udp"
     volumes:
       - ./dnsmasq.conf:/etc/dnsmasq.conf
       - ./log:/var/log/dnsmasq
