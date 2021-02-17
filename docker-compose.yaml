@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  dnsmasq:
+    container_name: dnsmasq
+    image: ghcr.io/lostmaniac/dnsmasq:latest
+    restart: always
+    ports:
+      - "53:53"
+    cap_add:
+      - ALL
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+      - ./log:/var/log/dnsmasq
