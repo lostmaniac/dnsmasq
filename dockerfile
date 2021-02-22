@@ -7,4 +7,4 @@ COPY ad.conf /opt/ad.conf
 
 EXPOSE 53 53/udp
 
-ENTRYPOINT ["/usr/bin/runsvdir","-P","/etc/start"]
+ENTRYPOINT ["/sbin/runsvdir","-P","/etc/start"]
