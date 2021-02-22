@@ -9,4 +9,6 @@ services:
       - "53:53/udp"
     volumes:
       - ./dnsmasq.conf:/etc/dnsmasq.conf
-      - ./log:/var/log/dnsmasq
+      - ./log/dnsmasq:/var/log/dnsmasq
+      - ./supervisor.d/start:/etc/supervisor.d/start
+      - ./logrotate/dnsmasq:/etc/logrotate.d/dnsmasq

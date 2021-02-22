@@ -1,0 +1,15 @@
+/var/log/dnsmasq/*.log {
+	monthly
+    dateext
+    dateformat -%Y-%m
+	missingok
+	rotate 36
+	compress
+	delaycompress
+	notifempty
+	create 0640 root root
+	sharedscripts
+	prerotate
+		[ ! -f /var/run/dnsmasq.pid ] || kill -USR2 `cat /var/run/dnsmasq/dnsmasq.pid`
+	endscript
+}

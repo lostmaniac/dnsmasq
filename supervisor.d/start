@@ -1,0 +1,9 @@
+[dnsmasq]
+nodaemon=true
+[program:dnsmasq]
+command=/usr/sbin/dnsmasq -k --conf-file=/etc/dnsmasq.conf
+
+[crontab]
+nodaemon=true
+[program:crontab]
+command=/usr/sbin/crond -f
