@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.12
 LABEL org.opencontainers.image.source=https://github.com/lostmaniac/dnsmasq
 
 RUN apk update && apk --no-cache add dnsmasq logrotate supervisor
