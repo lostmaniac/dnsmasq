@@ -10,5 +10,4 @@ services:
     volumes:
       - ./dnsmasq.conf:/etc/dnsmasq.conf
       - ./log/dnsmasq:/var/log/dnsmasq
-      - ./start:/etc/start
       - ./logrotate/dnsmasq:/etc/logrotate.d/dnsmasq
